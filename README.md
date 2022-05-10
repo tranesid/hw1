@@ -11,6 +11,9 @@ is needed
 
 ### Getting Started
 ```
+
+// NOTE: be in the directory in Iterm where you want this project to live (probable week1)
+
 // clone project from github (ie. download from the internet)
 $ git clone git@github.com:jimibue/jest_starter.git hw1
 
