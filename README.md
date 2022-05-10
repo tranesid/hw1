@@ -49,6 +49,7 @@ Run specific file:
 
 ```shell
 $ yarn test filename
+$ yarn test hw1.test.js
 // or
 $ yarn jest filename
 ```
@@ -58,6 +59,7 @@ Run specific test:
 
 ```shell
 $ yarn test -t 'string to match'
+$ yarn test -t 'test doubleNumber'
 // or
 $ yarn jest -t 'string to match'
 ```
