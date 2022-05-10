@@ -13,6 +13,7 @@ is needed
 ```
 
 // NOTE: be in the directory in Iterm where you want this project to live (probably week1)
+/// NOTE: dont copy the '$' when you run these commands. they are just there to show these are terminal commands
 
 // clone project from github (ie. download from the internet)
 $ git clone git@github.com:jimibue/jest_starter.git hw1
