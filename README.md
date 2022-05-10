@@ -50,6 +50,7 @@ Run specific file:
 ```shell
 $ yarn test filename
 $ yarn test hw1.test.js
+$ yarn test hw2.test.js
 // or
 $ yarn jest filename
 ```
