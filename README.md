@@ -12,8 +12,9 @@ is needed
 ### Getting Started
 ```
 
-// NOTE: be in the directory in Iterm where you want this project to live (probably week1)
-/// NOTE: dont copy the '$' when you run these commands. they are just there to show these are terminal commands
+// NOTE: Be in the directory in Iterm where you want this project to live (probably week1)
+// NOTE: Don't copy the '$' when you run these commands. they are just there to 
+show these are terminal commands
 
 // clone project from github (ie. download from the internet)
 $ git clone git@github.com:jimibue/jest_starter.git hw1
@@ -39,26 +40,26 @@ $ yarn
 Run all tests once:
 
 ```shell
-yarn test
+$ yarn test
 // or
-yarn jest
+$ yarn jest
 ```
 
 Run specific file:
 
 ```shell
-yarn test filename
+$ yarn test filename
 // or
-yarn jest filename
+$ yarn jest filename
 ```
 
 
 Run specific test:
 
 ```shell
-yarn test -t 'string to match'
+$ yarn test -t 'string to match'
 // or
-yarn jest -t 'string to match'
+$ yarn jest -t 'string to match'
 ```
 
 ### Git and Github
