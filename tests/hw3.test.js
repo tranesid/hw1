@@ -1,4 +1,4 @@
-const { doubleNum, doubleArray } = require("../sol/hw3");
+const { doubleNum, doubleArray, isEven, filterEvens } = require("../sol/hw3");
 
 describe("doubling an array of numbers", () => {
   // test callback that doubles one number
@@ -20,3 +20,27 @@ describe("doubling an array of numbers", () => {
   });
 
 });
+
+describe("filter evens from an array of numbers", () => {
+  // test callback that see if number is even
+  it("test isEven", () => {
+    let returnValue1 = isEven(2);
+    let returnValue2 = isEven(3);
+
+    expect(returnValue1).toBe(true);
+    expect(returnValue2).toBe(false);
+  });
+
+  // test  filter of even numbers
+  it("test doubleArray", () => {
+    let returnValue1 = filterEvens([1,2,3,4]);
+    let returnValue2 = filterEvens([10,20,31]);
+    let returnValue3 = filterEvens([1,31]);
+
+    expect(returnValue1).toEqual([2,4]);
+    expect(returnValue2).toEqual([10,20]);
+    expect(returnValue3).toEqual([]);
+  });
+
+});
+
