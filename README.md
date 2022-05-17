@@ -17,7 +17,7 @@ is needed
 show these are terminal commands
 
 // clone project from github (ie. download from the internet)
-$ git clone git@github.com:jimibue/jest_starter.git hw1
+$ git clone git@github.com:jimibue/dpl-js-hw1-start.git hw1
 
 // navigate to the hw1 project in terminal
 $ cd hw1
