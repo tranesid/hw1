@@ -1,4 +1,4 @@
-const { addItemToArray, addItemToANewArray, replaceItemToArray, replaceItemToANewArray } = require("../sol/hw2");
+const { addItemToArray, addItemToANewArray, replaceItemToArray, replaceItemToANewArray } = require("../src/hw2");
 
 it("test addItemToArray", () => {
     let arr = ['b','d']

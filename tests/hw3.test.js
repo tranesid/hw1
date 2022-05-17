@@ -1,4 +1,4 @@
-const { doubleNum, doubleArray, isEven, filterEvens } = require("../sol/hw3");
+const { doubleNum, doubleArray, isEven, filterEvens } = require("../src/hw3");
 
 describe("doubling an array of numbers", () => {
   // test callback that doubles one number
