@@ -118,7 +118,7 @@ const fizzbuzz = (num) => {
       return num
     }
 };
-
+//change avove to switch statement
 module.exports = {
   doubleNumber,
   vowelCount,
