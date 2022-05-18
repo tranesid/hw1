@@ -1,3 +1,7 @@
+
+
+
+/////////////////////////////////////////////////////////
 //function that takes a number and doubles it
 // yarn jest -t 'test doubleNumber'
 const doubleNumber = (num) => {
@@ -22,6 +26,7 @@ const randomNumber = (maxLimit = 5 ) => {
   let rand = Math. random() * maxLimit;
 
   return Math.round(rand);
+
 };
 
 /// function that takes two numbers num and 'opp'
@@ -60,26 +65,38 @@ const getSum = (numbers) => {
   return numbers.reduce(function(a,b) {
     return a + b
   });
-}
+};
 
 /// function that takes an array of numbers and returns highest num
 // yarn jest -t 'test getHighNum'
-const getHighNum = (numbers) => {
-  var num = [4,5,1,3];
-console.log(Math.max.apply(null, num)); 
-  
+const getHighNum = (array) => {
+  return Math.max.apply(null, array);
 };
+// keep getting undefined!?!?!
+// https://www.codegrepper.com/code-examples/javascript/find+max+and+min+value+in+array+javascript
+
+
 /// function that takes an array of numbers and returns lowest num
 // yarn jest -t 'test getLowNum'
-const getLowNum = (numbers) => {
-  console.log(Math.min(1,2,3));
-  console.log(Math.min(4,2,1,));
+const getLowNum = (array) => {
+  return Math.min.apply(null, array);
 };
 /// function that takes an array of numbers and returns true if sorted (low to high only)
 // yarn jest -t 'test isSorted'
 const isSorted = (numbers) => {
-  // TODO
-};
+  let prev, cur;
+
+  for (var i = 0; i < numbers.length; i++) {
+    cur = numbers[i];
+    if (i && cur !== prev && cur !== prev + 1) return false;
+    prev = cur;
+  }
+
+  return true;
+}
+// for (initial value; condition; iteration) 
+// https://stackoverflow.com/questions/41668213/how-to-check-if-an-array-is-increasing-in-javascript
+
 
 //  write a function that takes a number (0-100)
 //  return 'fizz' if only divisible by 3
@@ -88,7 +105,18 @@ const isSorted = (numbers) => {
 //  return the number if none apply
 // yarn jest -t 'test fizzbuzz'
 const fizzbuzz = (num) => {
-    //TODO
+    if (num < 0 && num > 100) {
+      return invalid
+      // fix statement below
+    } else if (num % 3 === 0 && (num !% 5 === 0)) {
+        return 'fizz'
+    } else if (num % 5 === 0) {
+      return 'buzz'
+    } else if (num % 3 === 0 && num % 5 === 0) {
+      return 'fizzbuzz'
+    } else {
+      return num
+    }
 };
 
 module.exports = {
@@ -103,3 +131,21 @@ module.exports = {
   fizzbuzz,
   randomNumber,
 };
+
+// QUESTIONS:
+// am i supposed to be writing my own variables and tests(expect statements)?
+// why are we declaring functions in variables? to answer multiple questoins?
+//  (A) After a function expression has been stored in a variable, the variable can be used as a function
+
+
+// NOTES:
+// fuction expressions can be stored in variable
+//  ex: const functoinName = (parameter) => {
+//       (arguments)
+//       (rule to make expectations work)
+//      }
+
+// when calling the function, you provide the parameter specific info.
+
+// easy function tutorial:
+// https://www.youtube.com/watch?v=AY6X5jZZ_JE
