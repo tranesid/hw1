@@ -1,7 +1,4 @@
 
-
-
-/////////////////////////////////////////////////////////
 //function that takes a number and doubles it
 // yarn jest -t 'test doubleNumber'
 const doubleNumber = (num) => {
@@ -31,10 +28,10 @@ const randomNumber = (maxLimit = 5 ) => {
 
 /// function that takes two numbers num and 'opp'
 /// opp can be +, -, /, or *
-// yarn jest -t 'test randomNumber'
+// yarn jest -t 'test calc'
 const calc = (num1, num2, opp) => {
-  if (opp === '+') return rum1 * num2;
-  if (opp === '-') return num1 * num2;
+  if (opp === '+') return num1 + num2;
+  if (opp === '-') return num1 - num2;
   if (opp === '*') return num1 * num2;
   if (opp === '/') return num1 / num2;
 };
@@ -72,7 +69,6 @@ const getSum = (numbers) => {
 const getHighNum = (array) => {
   return Math.max.apply(null, array);
 };
-// keep getting undefined!?!?!
 // https://www.codegrepper.com/code-examples/javascript/find+max+and+min+value+in+array+javascript
 
 
@@ -81,6 +77,7 @@ const getHighNum = (array) => {
 const getLowNum = (array) => {
   return Math.min.apply(null, array);
 };
+
 /// function that takes an array of numbers and returns true if sorted (low to high only)
 // yarn jest -t 'test isSorted'
 const isSorted = (numbers) => {
@@ -94,6 +91,7 @@ const isSorted = (numbers) => {
 
   return true;
 }
+
 // for (initial value; condition; iteration) 
 // https://stackoverflow.com/questions/41668213/how-to-check-if-an-array-is-increasing-in-javascript
 
@@ -107,10 +105,9 @@ const isSorted = (numbers) => {
 const fizzbuzz = (num) => {
     if (num < 0 && num > 100) {
       return invalid
-      // fix statement below
-    } else if (num % 3 === 0 && (num !% 5 === 0)) {
+    } else if (num % 3 === 0 && (num % 5 !== 0)) {
         return 'fizz'
-    } else if (num % 5 === 0) {
+    } else if (num % 5 === 0 && (num % 3 !== 0)) {
       return 'buzz'
     } else if (num % 3 === 0 && num % 5 === 0) {
       return 'fizzbuzz'
@@ -118,7 +115,7 @@ const fizzbuzz = (num) => {
       return num
     }
 };
-//change avove to switch statement
+
 module.exports = {
   doubleNumber,
   vowelCount,
@@ -131,12 +128,6 @@ module.exports = {
   fizzbuzz,
   randomNumber,
 };
-
-// QUESTIONS:
-// am i supposed to be writing my own variables and tests(expect statements)?
-// why are we declaring functions in variables? to answer multiple questoins?
-//  (A) After a function expression has been stored in a variable, the variable can be used as a function
-
 
 // NOTES:
 // fuction expressions can be stored in variable
