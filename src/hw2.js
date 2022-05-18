@@ -1,5 +1,5 @@
 
-// This 4 methods are trying to illustrate a couple ideas
+// These 4 methods are trying to illustrate a couple ideas
 // Mutation: does your function change the things passed to it
 // Adding an item vs replacing in item in array.
 
@@ -12,7 +12,7 @@
  * @returns {undefined}
  */
  const addItemToArray = (arr, item, index)=>{
-   //TODO
+   arr.splice(index, 0, item);
 }
 
 /**
@@ -23,7 +23,9 @@
  * @returns {array} a new array with item added
  */
 const addItemToANewArray=(arr, item, index)=>{
-     //TODO
+     let arrCopy = [...arr];
+     arrCopy.splice(index, 0, item);
+     return arrCopy
 }
 
 /**
@@ -34,7 +36,7 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {undefined}
  */
  const replaceItemToArray = (arr, item, index)=>{
-       //TODO
+   arr.splice(index, 1, item)
 }
 
 /**
@@ -45,7 +47,9 @@ const addItemToANewArray=(arr, item, index)=>{
  * @returns {array} a new array with item added
  */
 const replaceItemToANewArray=(arr, item, index)=>{
-   //TODO
+   let newArray = [...arr];
+   newArray.splice(index, 1, item);
+   return newArray
 }
 
 module.exports = {
