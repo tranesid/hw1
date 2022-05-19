@@ -50,7 +50,7 @@ const { isOddOrEven } = require("./hw1");
    * @return {[number]} a NEW array with only even numbers
    */
    const filterEvens = (arr) => {
-    let theEvens = arr.filter(number => number % 2 == 0);
+    let theEvens = arr.filter(isEven);
     return theEvens
   };
   
