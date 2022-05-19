@@ -34,7 +34,12 @@ const { isOddOrEven } = require("./hw1");
    * @return  {boolean} true if number was even false otherwise
    */
   const isEven = (num) => {
-      if(num % 2 == 0) 
+      if(num % 2 == 0){
+        return true
+      }
+      else {
+        return false
+      }
       // got stuck trying to write if else statements
   };
   
