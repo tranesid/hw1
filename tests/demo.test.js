@@ -5,6 +5,8 @@
 //   do stuff..
 // }
 
+const exp = require("constants");
+
 // .toEqual checking for same properites
 // .toBe checking memory address, identical? or nahhh
 
@@ -76,3 +78,29 @@ it('test equality objects', ()=>{
   
       return JSON.stringify(aKeys) === JSON.stringify(bKeys);
   }})
+
+  it('looks at mutations in objects',()=>{
+    let per1 = {name:'john', age:12}
+    let per2 = {name:'bill', age:15}
+
+    // add key:pair to object
+    // mutates object
+    per1.eyeColor = 'brown'
+    expect(per1).toEqual( {name:'john', age:12, eyeColor:'brown'})
+
+    // without mutating
+    let per2Clone = {...per2, eyeColor:'blue'}
+    expect(per2).toEqual({name:'bill', age:15})
+    expect(per2Clone).toEqual({name:'bill', age:15, eyeColor:'blue'})
+
+    //update 
+    // mutation
+    per1.eyeColor = 'Hazel'
+    expect(per1).toEqual( {name:'john', age:12, eyeColor:'Hazel'})
+
+    // without mutating
+    let anotherclone = {...per2Clone, eyeColor:'red'}
+    expect(per2Clone).toEqual({name:'bill', age:15, eyeColor:'blue'})
+    expect(anotherclone).toEqual({name:'bill', age:15, eyeColor:'red'})
+
+})
