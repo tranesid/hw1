@@ -157,18 +157,17 @@ let sortByName = characters.sort((a,b) => {
 
 // Sort by mass ????
 
-let sortByMass = characters.sort((a,b) => {
-  if(a.mass > b.mass) {
-    return 1;
-  } else if (b.mass > a.mass) {
-    return -1;
-  } else {
-    return 0;
-  }
+let sortByMass = characters.sort(function(a,b) {
+  return a.mass - b.mass
 })
+
 // console.log(sortByMass)
 
 // Sort by height ????
+
+let sortHeight = characters.sort(function(a,b) {
+  return a.height - b.height
+})
 
 // Sort by gender
 
@@ -214,9 +213,25 @@ let allMale = characters.every((gender) => {
 
 // SOME
 // Is there at least one male character?
+
+let checkForMales = characters.some(characters => characters.gender === 'male')
+// console.log(checkForMales)
+
 // Is there at least one character with blue eyes?
+
+let checkForBlueEyes = characters.some(characters => characters.eye_color === 'blue')
+// console.log(checkForBlueEyes)
+
 // Is there at least one character taller than 200?
+
+let checkWhoIsTall = characters.some(characters => characters.height > 200)
+// console.log(checkWhoIsTall)
+
 // Is there at least one character that has mass less than 50?
+
+let MassLessthan50 = characters.some(characters => characters.mass < 50)
+// console.log(MassLessthan50)
+
 // Bonus
 // Redo the filter and map functions challenges, but do them with reduce/forEach
 // come up with your own and use different methods you have not used
