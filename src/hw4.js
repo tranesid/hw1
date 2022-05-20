@@ -168,7 +168,7 @@ let sortByMass = characters.sort(function(a,b) {
 let sortHeight = characters.sort(function(a,b) {
   return a.height - b.height
 })
-
+// console.log(sortHeight)
 // Sort by gender
 
 let byGender = characters.sort((a,b) => {
